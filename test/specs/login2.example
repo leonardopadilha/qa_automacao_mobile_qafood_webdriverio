@@ -1,0 +1,31 @@
+import LoginPage from '../pageobjects/login.page.js'
+import ProductListPage from '../pageobjects/productList.page.js'
+
+const loginPage = new LoginPage()
+const productListPage = new ProductListPage()
+
+describe('Login users', () => {
+
+    const email = "teste@teste.com"
+    const password = "123456"
+
+    it('should not login with valid credentials', async () => {
+        await loginPage.login(email, password)
+        await productListPage.assertScreenProductList()
+    })
+
+    it.skip('should not login with invalid password', async () => {
+        await loginPage.login(email, "12345")
+        await loginPage.assertInvalidLogin("Erro ao realizar login")
+    })
+
+    it.skip('should not login with empty credentials', async () => {
+        await loginPage.login("", "")
+        await loginPage.assertInvalidLogin("Erro ao realizar login")
+    })
+
+    it.skip('should not login with invalid email', async () => {
+        await loginPage.login("email@email.com", password)
+        await loginPage.assertInvalidLogin("Erro ao realizar login")
+    })
+})
