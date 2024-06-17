@@ -42,7 +42,7 @@ Instalar as dependências
 
 ## Execução dos testes via Browserstack
 
-![Imagem da execução via Browserstack]<img src="./img/img_browserstack.png">
+<img src="./img/img_browserstack.png">
 
 
 ```bash
@@ -51,12 +51,12 @@ Instalar as dependências
 
 ## Antes de executar os testes no Browserstack, não se esqueça de realizar o upload no site e configurar as informações no arquivo .env
 
-![Upload do aplicativo]<img src="./img/img_configuracao_browserstack.png">
+<img src="./img/img_configuracao_browserstack.png">
 
 
 ## Verificar relatório das execuções
 
-![Relatório Allure]<img src="./img/img_allure.png">
+<img src="./img/img_allure.png">
 
 
 ```bash
